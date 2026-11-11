@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TEN ARMS · 3D Action RPG (Next.js Edition)
 
-## Getting Started
+> **Ten weapons · One forest clearing.**
+> The dead rise in waves. Switch weapons mid-combo to multiply your score, dodge at the last second to slow time, and charge your energy for an ultimate.
 
-First, run the development server:
+---
+
+## 🎮 Tech Stack & Architecture
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router, Client Components, Server-Side Rendering)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) with Custom Cyberpunk / Dark Fantasy Design Tokens
+- **3D Graphics Engine**: [Three.js r128](https://threejs.org/) (WebGL2, PCF Soft Shadows, ACES Filmic Tonemapping, Custom Toon Shaders & HDR Bloom Pipeline)
+- **Audio Engine**: Synthesized Web Audio API + Recorded CC0 Synthwave / Combat soundtrack
+- **State Management**: Reactive Game State with LocalStorage Leaderboard persistence
+
+---
+
+## 🗡️ 10 Legendary Weapons
+
+| # | Weapon | Special / Style | Neon Theme | Ability Keys |
+|---|--------|-----------------|------------|--------------|
+| 1 | **Katana** | *Moon Ring* | `#b14cff` (Purple) | Q, E, R + RMB Ultimate |
+| 2 | **Twin Swords** | *Flash Step* | `#35d6ff` (Cyan) | Q, E, R + RMB Ultimate |
+| 3 | **Greatsword** | *Earthbreaker* | `#ffa726` (Amber) | Q, E, R + RMB Ultimate |
+| 4 | **Twin Blades** | *Blood Whirl* | `#ff2f52` (Crimson) | Q, E, R + RMB Ultimate |
+| 5 | **Twin Axes** | *Twin Crescent*| `#54ff62` (Emerald) | Q, E, R + RMB Ultimate |
+| 6 | **Long Staff** | *Thunder Bell* | `#4f7bff` (Cobalt) | Q, E, R + RMB Ultimate |
+| 7 | **Gauntlets** | *Hundred Fists* | `#ffd23f` (Gold) | Q, E, R + RMB Ultimate |
+| 8 | **Bow** | *Arrow Rain* | `#a6ff3d` (Lime) | Q, E, R + RMB Ultimate |
+| 9 | **Daggers** | *Shadow Strike*| `#e8f6ff` (Frost) | Q, E, R + RMB Ultimate |
+| 10| **Longsword** | *Sword Qi* | `#ff3b30` (Blood) | Q, E, R + RMB Ultimate |
+
+---
+
+## 🕹️ Controls
+
+### Keyboard & Mouse
+- **Move**: `W`, `A`, `S`, `D`
+- **Slash**: `Left Click` or `J` (hold to chain combos)
+- **Moves / Skills**: `Q`, `E`, `R` (each weapon has its own 3 unique moves)
+- **Ultimate**: `Right Click` or `K` (requires full energy)
+- **Perfect Dodge**: `Space` (dodge at the last millisecond to trigger Bullet-Time slow motion)
+- **Switch Weapons**: `1` – `0` or `Scroll Wheel` (switch mid-combo to multiply score)
+- **Camera**: `Mouse` (pointer lock) or `←` / `→`
+- **Utility**: `M` (Mute/Unmute), `P` / `Esc` (Pause), `F` (Fullscreen)
+
+### Mobile / Touch
+- **Move**: Virtual thumbstick on the left half of the screen
+- **Camera**: Drag on the right half of the screen
+- **Actions**: Dedicated floating buttons for `SLASH`, `DODGE`, `1`, `2`, `3`, `ULTI`, `◀`, `▶`
+
+---
+
+## 🚀 Running the Project
 
 ```bash
+# Navigate to project folder
+cd /home/jay/ten-arms
+
+# Development Mode
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Production Build & Start
+npm run build
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Access the game in your browser at:
+**[http://localhost:3000](http://localhost:3000)**
